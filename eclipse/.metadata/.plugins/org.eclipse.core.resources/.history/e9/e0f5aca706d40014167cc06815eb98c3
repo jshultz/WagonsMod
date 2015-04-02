@@ -1,0 +1,27 @@
+package shultzy88.wagons.main;
+
+import shultzy88.wagons.entity.EntityCoveredWagon;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
+
+public class CommonProxy
+{
+	
+	public void preInit(FMLPreInitializationEvent e)
+	{
+		Register
+		EntityRegistry.registerModEntity(EntityCoveredWagon.class, "Stagecoach", 1, this, 80, 3, true);
+	}
+	
+	public void init(FMLInitializationEvent e)
+	{
+		
+	}
+	
+	public void postInit(FMLPostInitializationEvent e)
+	{
+		
+	}
+}

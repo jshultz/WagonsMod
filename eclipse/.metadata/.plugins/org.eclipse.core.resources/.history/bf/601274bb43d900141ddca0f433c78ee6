@@ -1,0 +1,25 @@
+package com.shultzy88.wagons.event;
+
+import com.shultzy88.wagons.entity.EntityOxen;
+
+import net.minecraft.entity.passive.EntityHorse;
+import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
+import com.shultzy88.wagons.entity.ExtendedEntityPropertiesUtility;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
+public class BindEntityEventHandler
+{
+	@SubscribeEvent
+	public void onEntityConstructing(EntityConstructing event)
+	{
+		// Register extended entity properties
+		// Bind entities
+		
+		if (event.entity instanceof EntityHorse)
+		{
+			event.entity.registerExtendedProperties("ExtendedUtilityAnimal",
+					new ExtendedEntityPropertiesUtility());
+			
+		}
+	}
+}

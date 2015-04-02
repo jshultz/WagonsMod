@@ -1,0 +1,13 @@
+package shultzy88.wagons.event;
+
+import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
+
+public class BindEntityEventHandler
+{
+
+	
+	public onEntityConstructing(EntityConstructing event)
+	{
+		
+	}
+}

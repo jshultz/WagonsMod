@@ -1,0 +1,6 @@
+package shultzy88.wagons.event;
+
+public class BindEntityEventHandler
+{
+
+}

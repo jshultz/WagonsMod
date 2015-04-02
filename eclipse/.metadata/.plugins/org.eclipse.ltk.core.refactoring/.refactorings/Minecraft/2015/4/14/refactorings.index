@@ -1,0 +1,29 @@
+1427859101637	Rename field 'coverTop'
+1427859396241	Rename field 'cover'
+1427906349828	Delete element
+1427906415411	Rename type 'ExtendedPropertiesHaulAnimal'
+1427908768600	Rename field 'entity'
+1427909867504	Rename local variable 'compound'
+1427909876577	Rename local variable 'parCompound'
+1427912359464	Rename local variable 'p_70056_1_'
+1427912374486	Rename local variable 'p_70056_3_'
+1427912481615	Rename local variable 'p_70056_5_'
+1427912572031	Rename local variable 'p_70056_8_'
+1427913392005	Rename type 'ExtendedPropertiesHorse'
+1427914622756	Rename field 'isHorseBinded'
+1427916721385	Delete element
+1427918701869	Rename type 'ExtendedPropertiesUtilAnimal'
+1427923134673	Rename field 'isAnimalBinded'
+1427930397621	Move compilation unit
+1427943530108	Copy package
+1427943559517	Delete element
+1427943587531	Move compilation unit
+1427943623264	Move compilation units
+1427943835675	Move compilation unit
+1427943846754	Move compilation unit
+1427943873385	Move compilation unit
+1427943879985	Delete element
+1427943894602	Delete element
+1427982902953	Delete element
+1427984565957	Delete element
+1427984570992	Delete element

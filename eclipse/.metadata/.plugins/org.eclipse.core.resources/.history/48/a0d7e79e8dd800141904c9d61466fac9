@@ -1,0 +1,16 @@
+package shultzy88.wagons.entity;
+
+import net.minecraft.entity.EntityAgeable;
+import net.minecraft.entity.passive.EntityAnimal;
+
+public class EntityTransportAnimal extends EntityAnimal
+{
+
+	@Override
+	public EntityAgeable createChild(EntityAgeable p_90011_1_)
+	{
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

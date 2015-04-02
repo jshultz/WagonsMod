@@ -1,0 +1,6 @@
+package com.shultzy88.wagons.event;
+
+public class WagonEventHandler
+{
+
+}

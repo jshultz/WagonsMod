@@ -7,6 +7,8 @@
 	<item value="422" key="DIALOG_X_ORIGIN"/>
 	<item value="55" key="DIALOG_Y_ORIGIN"/>
 	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/shultzy88/wagons-mod"/>
+		<item value="http://github.com/shultzy88/wagons-mod"/>
 		<item value="https://github.com/shultzy88/steves-wagons-mod"/>
 	</list>
 	<section name="org.eclipse.egit.ui.internal.dialogs.ResetTargetSelectionDialog.dialogBounds">
@@ -17,6 +19,10 @@
 		<item value="-61" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="GitImportWizard">
+	</section>
+	<section name="org.eclipse.egit.ui.internal.pull.PullResultDialog.dialogBounds">
+		<item value="577" key="DIALOG_X_ORIGIN"/>
+		<item value="286" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="GitCommitMessageComponent">
 	</section>

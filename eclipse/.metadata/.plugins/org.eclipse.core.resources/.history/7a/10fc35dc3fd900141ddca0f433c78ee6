@@ -1,8 +1,0 @@
-package com.shultzy88.wagons.item;
-
-import net.minecraft.item.Item;
-
-public class ItemLasso extends Item
-{
-
-}

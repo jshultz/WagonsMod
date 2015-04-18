@@ -1,0 +1,5 @@
+entity.entityCoveredWagon.name=Covered Wagon
+item.itemCoveredWagon.name=Covered Wagon
+key.attach.desc=Attach mode
+key.detach.desc=Detach mode
+key.gui.desc=Open GUI

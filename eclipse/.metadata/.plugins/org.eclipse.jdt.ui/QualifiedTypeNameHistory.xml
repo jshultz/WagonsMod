@@ -13,13 +13,23 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.common.eventhandler.SubscribeEvent"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.entity.EntityEvent.EntityConstructing"/>
 <fullyQualifiedTypeName name="net.minecraft.entity.passive.EntityHorse"/>
-<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
-<fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
 <fullyQualifiedTypeName name="net.minecraftforge.event.entity.player.PlayerInteractEvent.Action"/>
 <fullyQualifiedTypeName name="ibxm.Player"/>
-<fullyQualifiedTypeName name="net.minecraft.entity.EntityLiving"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="com.sun.media.jfxmedia.logging.Logger"/>
+<fullyQualifiedTypeName name="net.minecraftforge.client.event.RenderGameOverlayEvent.Chat"/>
+<fullyQualifiedTypeName name="akka.event.Logging.Debug"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="net.minecraft.entity.EntityLiving"/>
+<fullyQualifiedTypeName name="com.shultzy88.wagons.entity.EntityWagon"/>
+<fullyQualifiedTypeName name="net.minecraft.client.settings.KeyBinding"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.client.registry.ClientRegistry"/>
+<fullyQualifiedTypeName name="org.lwjgl.input.Keyboard"/>
+<fullyQualifiedTypeName name="net.minecraft.item.Item"/>
+<fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Items"/>
+<fullyQualifiedTypeName name="net.minecraft.init.Blocks"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
+<fullyQualifiedTypeName name="cpw.mods.fml.relauncher.SideOnly"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,27 @@
+/**
+ * 
+ */
+package com.shultzy88.wagons.item;
+
+import net.minecraft.item.Item;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
+/**
+ * @author Shultzy
+ *
+ */
+public class ItemLasso extends Item
+{
+	@SideOnly(Side.CLIENT)
+	private int mode;
+
+	/**
+	 * 
+	 */
+	public ItemLasso()
+	{
+		
+	}
+
+}

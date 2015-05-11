@@ -1,0 +1,86 @@
+package com.shultzy88.wagons.main;
+
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+import com.shultzy88.wagons.entity.EntityCoveredWagon;
+import com.shultzy88.wagons.item.ItemWagon;
+
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.EntityRegistry;
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class CommonProxy
+{
+	// items and blocks
+	public static ItemWagon itemCoveredWagon;
+	
+	private static Item itemWheel;
+	private static Item itemYoke;
+	
+	public void preInit(FMLPreInitializationEvent e)
+	{
+		// intitialization
+		itemWheel = new Item().setUnlocalizedName("wheel")
+				.setCreativeTab(CreativeTabs.tabMisc); // component item
+		
+		itemCoveredWagon = (ItemWagon) new ItemWagon(0)
+				.setUnlocalizedName("coveredWagon");
+
+		// registry
+		GameRegistry.registerItem(itemWheel, "wheel");
+
+		GameRegistry.registerItem(itemCoveredWagon, "coveredWagon");
+		EntityRegistry.registerModEntity(EntityCoveredWagon.class,
+				"coveredWagon",
+				EntityRegistry.findGlobalUniqueEntityId(),
+				Main.instance,
+				80,
+				3,
+				false);
+	}
+
+	public void init(FMLInitializationEvent e)
+	{
+		GameRegistry.addRecipe(new ItemStack(itemWheel, 2), new Object[] {
+				" / ",
+				"/I/",
+				" / ",
+				'/',
+				Items.stick,
+				'I',
+				Items.iron_ingot });
+
+		GameRegistry.addRecipe(new ItemStack(itemYoke), new Object[] {
+				"l#l",
+				'l',
+				Items.leather,
+				'#',
+				Blocks.planks });
+
+		GameRegistry.addRecipe(new ItemStack(itemCoveredWagon), new Object[] {
+				"www",
+				"#c#",
+				"/oo",
+				'w',
+				Blocks.wool,
+				'#',
+				Blocks.planks,
+				'c',
+				Blocks.chest,
+				'/',
+				Items.stick,
+				'o',
+				itemWheel });
+	}
+
+	public void postInit(FMLPostInitializationEvent e)
+	{
+
+	}
+}

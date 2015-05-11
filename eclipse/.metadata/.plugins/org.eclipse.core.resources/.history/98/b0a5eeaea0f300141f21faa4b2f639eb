@@ -1,0 +1,53 @@
+package com.shultzy88.wagons.main;
+
+import net.minecraft.client.settings.KeyBinding;
+
+import org.lwjgl.input.Keyboard;
+
+import com.shultzy88.wagons.entity.EntityCoveredWagon;
+import com.shultzy88.wagons.entity.EnumAction;
+import com.shultzy88.wagons.render.RenderCoveredWagon;
+
+import cpw.mods.fml.client.registry.ClientRegistry;
+import cpw.mods.fml.client.registry.RenderingRegistry;
+import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+
+public class CombinedClientProxy extends CommonProxy
+{
+	public static KeyBinding[] keyBinding;
+	public EnumAction mode;
+	@Override
+	public void preInit(FMLPreInitializationEvent e)
+	{
+		// register the renderer
+		RenderingRegistry.registerEntityRenderingHandler(EntityCoveredWagon.class, new RenderCoveredWagon());
+		super.preInit(e);
+	}
+
+	@Override
+	public void init(FMLInitializationEvent e)
+	{
+		// declare an array of key bindings
+		keyBinding = new KeyBinding[2];
+		
+		// instantiate the key bindings
+		keyBinding[mode.MOUNT.getMode()] = new KeyBinding(mode.MOUNT.getResourceKey(), Keyboard.KEY_L, "key.steveswagons.category");
+		keyBinding[mode.OPEN_GUI.getMode()] = new KeyBinding(mode.OPEN_GUI.getResourceKey(), Keyboard.KEY_L, "key.steveswagons.category");
+		
+		// register each key binding to the client
+		for (KeyBinding keyIndex : keyBinding)
+		{
+			ClientRegistry.registerKeyBinding(keyIndex);
+		}
+		
+	}
+
+	@Override
+	public void postInit(FMLPostInitializationEvent e)
+	{
+		super.postInit(e);
+	}
+	
+}

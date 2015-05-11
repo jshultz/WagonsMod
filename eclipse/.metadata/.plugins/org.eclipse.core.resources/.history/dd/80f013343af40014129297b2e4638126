@@ -1,0 +1,20 @@
+package com.shultzy88.wagons.event;
+
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraftforge.event.entity.living.LivingEvent.LivingJumpEvent;
+import cpw.mods.fml.common.eventhandler.EventPriority;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
+
+
+public class WagonEventHandler
+{
+	@SubscribeEvent(priority=EventPriority.HIGHEST, receiveCanceled=true)
+	public void onEvent(LivingJumpEvent evt)
+	{
+		if (evt.entity instanceof EntityPlayer)
+		{
+			System.out.println("Boing");
+		}
+	}
+}

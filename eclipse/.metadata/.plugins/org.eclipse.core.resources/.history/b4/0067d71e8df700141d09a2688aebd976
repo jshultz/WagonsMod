@@ -1,0 +1,61 @@
+/**
+ * 
+ */
+package com.shultzy88.wagons.entity;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.passive.EntityHorse;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
+import net.minecraftforge.common.IExtendedEntityProperties;
+
+public class ExtendedHorse implements IExtendedEntityProperties
+{
+	private final static String NAME = "ExtendedHorse";
+	private EntityHorse horse;
+	private World world;
+	private boolean isBinded;
+
+	public ExtendedHorse(EntityHorse horse)
+	{
+		this.horse = horse;
+		this.isBinded = false;
+	}
+	@Override
+	public void saveNBTData(NBTTagCompound compound)
+	{
+		// DEBUG
+		System.out.println("ExendedPropertiesHorse save NBT Data");
+		
+		NBTTagCompound property = new NBTTagCompound();
+		
+		property.setBoolean("isBinded", isBinded);
+		compound.setTag(NAME, property);	// set as a sub-compound
+	}
+
+	@Override
+	public void loadNBTData(NBTTagCompound compound)
+	{
+		// DEBUG
+		System.out.println("ExtendedPropertiesHorse load NBT Data");
+		
+		// get the sub-compound
+		NBTTagCompound property = (NBTTagCompound) compound.getTag(NAME);
+		isBinded = property.getBoolean("isBinded");
+	}
+	
+	public static final ExtendedHorse get(EntityHorse horse)
+	{
+		return (ExtendedHorse) horse.getExtendedProperties(NAME);
+	}
+	
+	public static final void register(EntityHorse horse)
+	{
+		horse.registerExtendedProperties(NAME, new ExtendedHorse(horse));
+	}
+
+	@Override
+	public void init(Entity entity, World parWorld) { }
+
+}

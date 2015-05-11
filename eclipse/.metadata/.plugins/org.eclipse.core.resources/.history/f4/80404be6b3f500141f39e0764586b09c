@@ -1,0 +1,28 @@
+package com.shultzy88.steveswagons.packet;
+
+import io.netty.buffer.ByteBuf;
+import cpw.mods.fml.common.network.ByteBufUtils;
+import cpw.mods.fml.common.network.simpleimpl.IMessage;
+
+public class ModMessage implements IMessage
+{
+
+	private String text;
+	
+	public ModMessage() { }
+	
+	public ModMessage(String text) { this.text = text; }
+	
+	@Override
+	public void fromBytes(ByteBuf buf)
+	{
+		text = ByteBufUtils.readUTF8String(buf);
+	}
+
+	@Override
+	public void toBytes(ByteBuf buf)
+	{
+		ByteBufUtils.writeUTF8String(buf, text);
+	}
+
+}

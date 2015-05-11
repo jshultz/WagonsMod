@@ -1,0 +1,68 @@
+package com.shultzy88.wagons.entity;
+
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.World;
+import net.minecraftforge.common.IExtendedEntityProperties;
+
+public class ExtendedPlayer implements IExtendedEntityProperties
+{
+	private static final String NAME = "ExtendedPlayer";
+	private EntityPlayer player;
+	private World myWorld;
+	private byte action;	// saved state ADD/REMOVE
+	
+	public ExtendedPlayer(EntityPlayer player)
+	{
+		this.player = player;
+		this.setAction(0);	// number 0 represents ADD as default
+	}
+
+	@Override
+	public void saveNBTData(NBTTagCompound compound)
+	{
+		System.out.println("Saving NBT data: ExtendedPlayer");
+		
+		NBTTagCompound property = new NBTTagCompound();
+		
+		property.setByte("lassoAction", getAction());
+		compound.setTag(NAME, property);
+	}
+
+	@Override
+	public void loadNBTData(NBTTagCompound compound)
+	{
+		System.out.println("Loading NBT data: ExtendedPlayer");
+		NBTTagCompound property = (NBTTagCompound) compound.getTag(NAME);
+		
+		setAction(property.getByte("lassoAction"));
+		
+		// DEBUG:
+		System.out.println("Current lasso state from NBT: " + getAction());
+	}
+	
+	public static final ExtendedPlayer get(EntityPlayer player)
+	{
+		return (ExtendedPlayer) player.getExtendedProperties(NAME);
+	}
+	
+	public static final void register(EntityPlayer player)
+	{
+		player.registerExtendedProperties(NAME, new ExtendedPlayer(player));
+	}
+
+	@Override
+	public void init(Entity entity, World world) { }
+
+	private byte getAction()
+	{
+		return action;
+	}
+
+	private void setAction(byte action)
+	{
+		this.action = action;
+	}
+
+}

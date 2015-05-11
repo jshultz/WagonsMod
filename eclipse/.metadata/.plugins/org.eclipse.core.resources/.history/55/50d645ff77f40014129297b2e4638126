@@ -1,0 +1,11 @@
+entity.coveredWagon.name=Covered Wagon
+
+item.coveredWagon.name=Covered Wagon
+item.wheel.name=Wheel
+
+key.steveswagons.category=Steve's Wagons
+action.add.desc=Add to wagon
+action.remove.desc=Remove from wagon
+
+
+info.chat.invalid=You must have at least one horse leashed and not be over capacity

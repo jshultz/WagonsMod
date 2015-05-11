@@ -1,0 +1,27 @@
+package com.shultzy88.wagons.event;
+
+import net.minecraft.entity.passive.EntityHorse;
+import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
+
+import com.shultzy88.wagons.entity.ExtendedHorse;
+
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+
+public class EntityEventHandler
+{
+	@SubscribeEvent
+	public void onEntityConstructing(EntityConstructing evt)
+	{
+		// Register extended entity properties if entity is of subclass
+		// EntityHorse
+
+		if (evt.entity instanceof EntityHorse)
+		{
+			// DEBUG
+			System.out.println("EntityConstucting event fired");
+
+			evt.entity.registerExtendedProperties("ExtendedPropertiesHorse",
+					new ExtendedHorse());
+		}
+	}
+}

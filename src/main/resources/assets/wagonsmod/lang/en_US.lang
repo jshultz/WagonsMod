@@ -1,0 +1,7 @@
+item.wagon_0.name=Covered Wagon
+item.lasso.name=Lasso
+
+key.wagonsmod.category=WagonCraft
+
+key.wagon_inv.desc=Open wagon inventory
+key.lasso.desc=Open mode selector

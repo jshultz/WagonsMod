@@ -1,15 +1,14 @@
-****************************
- Powered By MCP:             
- http://mcp.ocean-labs.de/   
- Searge, ProfMobius, Fesh0r, 
- R4wk, ZeuX, IngisKahn, bspkrs
- MCP Data version : unknown
-****************************
-:eclipseClasspath
-:eclipseJdt
-:eclipseProject
-:eclipse
+#################################################
+         ForgeGradle 2.2-SNAPSHOT-d13a6c8        
+  https://github.com/MinecraftForge/ForgeGradle  
+#################################################
+               Powered by MCP unknown               
+             http://modcoderpack.com             
+         by: Searge, ProfMobius, Fesh0r,         
+         R4wk, ZeuX, IngisKahn, bspkrs           
+#################################################
 
-BUILD SUCCESSFUL
+CONFIGURE SUCCESSFUL
 
-Total time: 57.59 secs
+Total time: 4 mins 4.939 secs
+
